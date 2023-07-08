@@ -1,4 +1,8 @@
-package bytebank;
+package bytebank.test;
+
+import bytebank.modelo.Administrador;
+import bytebank.modelo.Gerente;
+import bytebank.modelo.SistemaInterno;
 
 public class TestSistemaInterno {
 

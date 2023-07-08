@@ -1,4 +1,8 @@
-package bytebank;
+package bytebank.test;
+
+import bytebank.modelo.Cuenta;
+import bytebank.modelo.CuentaCorriente;
+import bytebank.modelo.SaldoInsuficienteException;
 
 public class TestRetirar {
 

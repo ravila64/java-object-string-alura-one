@@ -1,4 +1,7 @@
-package bytebank;
+package bytebank.test;
+
+import bytebank.modelo.Funcionario;
+import bytebank.modelo.Ingeniero;
 
 public class TestFuncionario {
 

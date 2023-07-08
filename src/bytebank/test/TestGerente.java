@@ -1,8 +1,11 @@
-package bytebank;
+package bytebank.test;
+
+import bytebank.modelo.Gerente;
 
 public class TestGerente {
 
 	public static void main(String[] args) {
+//		bytebank.modelo.Gerente gerente=new bytebank.modelo.Gerente 
 		Gerente gerente=new Gerente();
 //		luis.setNombre("Luis");
 //		luis.setDocumento("4455");

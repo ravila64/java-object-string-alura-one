@@ -1,4 +1,4 @@
-package bytebank;
+package bytebank.modelo;
 
 // todos los metodos de la interfaces son abstractas, 
 // se puede quitar la palabra abstract x ser interface

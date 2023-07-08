@@ -1,4 +1,4 @@
-   package bytebank;
+   package bytebank.modelo;
 // entidad cuenta, cambio abstract 23-06-2023
 public abstract class Cuenta {
 	protected double saldo;

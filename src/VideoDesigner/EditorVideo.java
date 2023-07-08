@@ -1,6 +1,6 @@
 package VideoDesigner;
 
-import bytebank.Funcionario;
+import bytebank.modelo.Funcionario;
 
 public class EditorVideo extends Funcionario {
 	public Double getBonificacion(){

@@ -1,4 +1,9 @@
-package bytebank;
+package bytebank.test;
+
+import bytebank.modelo.Cuenta;
+import bytebank.modelo.CuentaAhorros;
+import bytebank.modelo.SaldoInsuficienteException;
+
 public class TestCuentaExceptionSaldo {
 	public static void main(String[] args) {
 		Cuenta ca= new CuentaAhorros(123, 456);

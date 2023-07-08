@@ -1,4 +1,10 @@
-package bytebank;
+package bytebank.test;
+
+import bytebank.modelo.Contador;
+import bytebank.modelo.ControlBonificacion;
+import bytebank.modelo.Funcionario;
+import bytebank.modelo.Gerente;
+import bytebank.modelo.Ingeniero;
 
 public class TestControlBonificacion {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package bytebank;
+package bytebank.modelo;
 
 public class CuentaCorriente extends Cuenta implements Tributacion{
 	public CuentaCorriente(int agencia, int numero) {
