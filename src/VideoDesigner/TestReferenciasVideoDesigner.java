@@ -1,7 +1,7 @@
 package VideoDesigner;
 
-import bytebank.modelo.ControlBonificacion;
-import bytebank.modelo.Gerente;
+import com.bytebank.modelo.ControlBonificacion;
+import com.bytebank.modelo.Gerente;
 
 public class TestReferenciasVideoDesigner {
 

@@ -1,4 +1,8 @@
-   package bytebank.modelo;
+   package com.bytebank.modelo.banco;
+
+import com.bytebank.modelo.Cliente;
+import com.bytebank.modelo.SaldoInsuficienteException;
+
 // entidad cuenta, cambio abstract 23-06-2023
 public abstract class Cuenta {
 	protected double saldo;

@@ -1,4 +1,4 @@
-package bytebank.modelo;
+package com.bytebank.modelo.banco;
 
 public class CuentaAhorros extends Cuenta {
 

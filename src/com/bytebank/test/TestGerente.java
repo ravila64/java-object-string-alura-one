@@ -1,6 +1,6 @@
-package bytebank.test;
+package com.bytebank.test;
 
-import bytebank.modelo.Gerente;
+import com.bytebank.modelo.Gerente;
 
 public class TestGerente {
 

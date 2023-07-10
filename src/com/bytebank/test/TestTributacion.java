@@ -1,8 +1,8 @@
-package bytebank.test;
+package com.bytebank.test;
 
-import bytebank.modelo.CalcularImpuesto;
-import bytebank.modelo.CuentaCorriente;
-import bytebank.modelo.SeguroDeVida;
+import com.bytebank.modelo.CalcularImpuesto;
+import com.bytebank.modelo.SeguroDeVida;
+import com.bytebank.modelo.banco.CuentaCorriente;
 
 public class TestTributacion {
 	public static void main(String[] args) {

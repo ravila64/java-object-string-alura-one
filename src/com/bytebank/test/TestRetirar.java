@@ -1,8 +1,8 @@
-package bytebank.test;
+package com.bytebank.test;
 
-import bytebank.modelo.Cuenta;
-import bytebank.modelo.CuentaCorriente;
-import bytebank.modelo.SaldoInsuficienteException;
+import com.bytebank.modelo.SaldoInsuficienteException;
+import com.bytebank.modelo.banco.Cuenta;
+import com.bytebank.modelo.banco.CuentaCorriente;
 
 public class TestRetirar {
 

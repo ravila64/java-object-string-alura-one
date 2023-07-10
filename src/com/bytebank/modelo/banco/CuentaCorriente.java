@@ -1,4 +1,7 @@
-package bytebank.modelo;
+package com.bytebank.modelo.banco;
+
+import com.bytebank.modelo.SaldoInsuficienteException;
+import com.bytebank.modelo.Tributacion;
 
 public class CuentaCorriente extends Cuenta implements Tributacion{
 	public CuentaCorriente(int agencia, int numero) {
