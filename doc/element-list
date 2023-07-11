@@ -1,0 +1,5 @@
+module:bytebank_heredado
+com.bytebank.modelo
+com.bytebank.modelo.banco
+com.bytebank.test
+VideoDesigner

@@ -1,10 +1,19 @@
-   package com.bytebank.modelo.banco;
+package com.bytebank.modelo.banco;
+/**
+ * Cuenta va a crear instancias de cuenta corriente
+ * @version 1.0
+ * @author Rene Avila
+ */
 
 import com.bytebank.modelo.Cliente;
 import com.bytebank.modelo.SaldoInsuficienteException;
 
 // entidad cuenta, cambio abstract 23-06-2023
 public abstract class Cuenta {
+	// public --> accesible desde cualquier parte
+	// --default --> accesible dentro del paquete
+	// --protected -->default + clases hijas
+	// ---private --> accesible desde clase misma
 	protected double saldo;
 	private int agencia;
 	private int numero;
@@ -17,10 +26,18 @@ public abstract class Cuenta {
 //	private static int total_no_validas=0;
 	
 	/* constructor */
+	/** 
+	 * Instancia una cuenta nueva
+	 * */
 	public Cuenta() {
 	}
 	
 	/* constructor par agencia */
+	/**	
+	 * Instancia una cuenta usando agencia+numero
+	 * @param agencia
+	 * @param numero
+	 */
 	public Cuenta(int agencia, int numero) {
 		if (agencia < 1) {
 //			total_no_validas++;
@@ -33,16 +50,6 @@ public abstract class Cuenta {
 		total_validas++;
 		this.numero = numero;
 		this.agencia = agencia;
-//		if (agencia <=0 || numero < 0) {
-//			System.out.println("No se pueden agencias o cuentas negativas o cero");
-//			this.agencia=1; // codigo agencia matriz
-//			this.numero=0;
-//			total_no_validas++;
-//		} else {
-//			this.numero = numero;
-//			this.agencia = agencia;
-//			total_validas++;
-//		}
 		System.out.println("Total cuentas validas "+total_validas);
 //		System.out.println("Total cuentas no validas "+total_no_validas);
 		System.out.println("Creando una cuenta !!! "+numero);
@@ -60,6 +67,12 @@ public abstract class Cuenta {
 //	}
 	
 	// retorna u n valor
+	/**
+	 * metodo retirar dinero cuenta y ocurre un error
+	 * devuleve una excepcion
+	 * @param valor 
+	 * @throws SaldoInsuficienteException
+	 */
 	public void retirar(double valor) throws SaldoInsuficienteException  {
 		if(this.saldo < valor) {
 			//throw new SaldoInsuficienteException("No tienes saldo");
@@ -69,17 +82,7 @@ public abstract class Cuenta {
 		}
 	}	
 		
-//	public boolean retirar(double valor ) {
-//		boolean retiro=false;
-//		if(this.saldo >= valor && valor > 0) {
-//			this.saldo -= valor; //this.saldo = this.saldo - valor 
-//			retiro=true;
-//		}else {
-//			retiro=false;
-//		}
-//		return retiro;
-//	}
-	
+
 	public boolean transferir(double valor, Cuenta micuenta) throws SaldoInsuficienteException{
 		boolean transfer=false;
 		if(this.saldo >= valor && valor > 0) {
@@ -95,15 +98,7 @@ public abstract class Cuenta {
 		return transfer;
 	}
 	
-//	public static void setTotal_validas(int total_validas) {
-//		Cuenta.total_validas = total_validas;
-//	}
-//
-//	public static void setTotal_no_validas(int total_no_validas) {
-//		Cuenta.total_no_validas = total_no_validas;
-//	}
-
-	/*  getters and settes */
+    /*  getters and settes */
 	public double getSaldo() {
 		return this.saldo;
 	}
@@ -112,10 +107,6 @@ public abstract class Cuenta {
 		return numero;
 	}
 	
-//	public void setNumero(int numero) {
-//		this.numero = numero;
-//	}
-//	
 //	public void setSaldo(double saldo) {}
 // esta clase fue reemplazada por depositar
 	
@@ -145,10 +136,6 @@ public abstract class Cuenta {
 		return total_validas;
 	}
 
-//	public static int getTotal_no_validas() {
-//		return total_no_validas;
-//	}
-	
 	@Override
 	public String toString() {
 		return "Cuenta-> [saldo=" + saldo + ", agencia=" + agencia + ", numero=" + numero + ", titular=" + titular + "]";
