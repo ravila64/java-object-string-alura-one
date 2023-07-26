@@ -1,5 +1,8 @@
 package com.bytebank.test;
-import java.lang.String; 
+import java.lang.String;
+
+import com.bytebank.modelo.banco.CuentaAhorros;
+import com.bytebank.modelo.banco.CuentaCorriente; 
 
 public class TestString {
 	public static void main(String[] args) {
@@ -17,7 +20,7 @@ public class TestString {
 		nom=nom.toLowerCase();
 		System.out.println("Despues todo a minusculas "+nom);
 		char letra = nom.charAt(3);
-		System.out.println("Despues todo a maysuculas "+letra);
+		System.out.println("Despues todo a mayusculas "+letra);
 		int ind = nom.indexOf(letra);
 		System.out.println("Posicion letra "+letra+" es "+ind);
 		String nombre = "Mario";
@@ -34,7 +37,32 @@ public class TestString {
 		if (nombre.contains("a")) {
 			System.out.println(" nombre "+nombre+" contiene letra [a]");
 		}
-
+		// definir obj Object
+		Object cuenta = new CuentaCorriente(500, 555);
+		System.out.println(cuenta.toString());
+		// pruebas para printLine() con sobrecarga
+		printLine(nombre);
+		printLine(nombre.length());
+		printLine(nombre.charAt(0));
+		printLine(new CuentaAhorros(500, 100));
 	}
+	
+	// resume todos las clases abajo definidas
+	// hace que se envie cualquier tipo en parametro, 
+	// y lo toma segun si es String, int, double, char, boolean etc
+	public static void printLine(Object  valor) {
+		System.out.println(valor);
+	}
+//	public static void printLine(String valor) {
+//		System.out.println(valor);
+//	}
+//	// sobrecargar metodo
+//	public static void printLine(int valor) {
+//		System.out.println(valor);
+//	}
+//	// sobrecarga tipo char
+//	public static void printLine(char valor) {
+//		System.out.println(valor);
+//	}
 	
 }
