@@ -138,7 +138,9 @@ public abstract class Cuenta {
 
 	@Override
 	public String toString() {
-		return "Cuenta-> [saldo=" + saldo + ", agencia=" + agencia + ", numero=" + numero + ", titular=" + titular + "]";
+		return "Cuenta-> [saldo=" + this.saldo + ", numero : "+this.numero+ ", agencia=" + this.agencia+"]";
+		// + ", numero=" + numero + ", titular=" + titular + "]";
+		// return super.toString();
 	}
 	
 }
