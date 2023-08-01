@@ -37,7 +37,7 @@ public class TestArrayList {
 		for (Cuenta object : lista) {
 			System.out.println(object);
 		}
-
+		
 	}
 	
 }
