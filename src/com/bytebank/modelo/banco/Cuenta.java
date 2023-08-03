@@ -135,7 +135,19 @@ public abstract class Cuenta {
 	public static int getTotal_validas() {
 		return total_validas;
 	}
-
+	
+	public boolean esIgual(Cuenta cuenta) {
+		return this.agencia==cuenta.getAgencia() && 
+				this.numero == cuenta.getNumero();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Cuenta cuenta = (Cuenta) obj;
+		return this.agencia==cuenta.getAgencia() && 
+				this.numero == cuenta.getNumero();
+	}
+	
 	@Override
 	public String toString() {
 		return "Cuenta-> [saldo=" + this.saldo + ", numero : "+this.numero+ ", agencia=" + this.agencia+"]";
