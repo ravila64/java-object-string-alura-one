@@ -9,20 +9,20 @@ public class Administrador extends Funcionario implements Autenticable {
 		this.util = new AutenticacionUtil();
 	}
 
-	@Override
+	//@Override
 	public Double getBonificacion() {
 		// TODO Auto-generated method stub
 		return 0.0;  // coloco this.salario; // para gerente
 	}
 
 	// clase Autenticable abstracta
-	@Override
+	//@Override
 	public boolean iniciarSesion(String clave) {
 		// TODO se implementa logica de iniciar sesion en Administrador
 		return this.util.iniciarSesion(clave);
 	}
 
-	@Override
+	//@Override
 	public void setClave(String clave) {
 		// TODO Auto-generated method stub
 		this.util.setClave(clave);
