@@ -11,16 +11,4 @@ public class ControlBonificacion {
 	public Double getSuma() {
 		return suma;
 	}
-	
-//	public Double RegistrarSalario(Gerente gerente) {
-//		this.suma = gerente.getBonificacion()+this.suma;
-//		System.out.println("Suma actual G:"+this.suma);
-//		return this.suma;
-//	}
-//	
-//	public Double RegistrarSalario(Contador contador) {
-//		this.suma = contador.getBonificacion()+this.suma;
-//		System.out.println("Suma actual C:"+this.suma);
-//		return this.suma;
-//	}
 }
