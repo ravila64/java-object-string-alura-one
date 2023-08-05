@@ -9,7 +9,8 @@ import com.bytebank.modelo.Cliente;
 import com.bytebank.modelo.SaldoInsuficienteException;
 
 // entidad cuenta, cambio abstract 23-06-2023
-public abstract class Cuenta {
+// implements Comparable // cuRSO  BE06
+public abstract class Cuenta implements Comparable<Cuenta>{
 	// public --> accesible desde cualquier parte
 	// --default --> accesible dentro del paquete
 	// --protected -->default + clases hijas
@@ -149,11 +150,18 @@ public abstract class Cuenta {
 	}
 	
 	@Override
+	public int compareTo(Cuenta o) {
+		// orden natural : numero de agencia
+		// return Integer.compare(this.agencia, o.getAgencia());
+		// orden natural x saldo
+		return Double.compare(this.saldo, o.getSaldo());
+	}
+	
+	@Override
 	public String toString() {
-		return "Cuenta-> [saldo=" + this.saldo + ", numero : "+this.numero+ ", agencia=" + this.agencia+"]";
+		return "Cuenta-> [saldo=" + this.saldo + ", numero : "+this.numero+ ", agencia=" + this.agencia+ ", titular=" + titular.getNombre()+"]";
 		// + ", numero=" + numero + ", titular=" + titular + "]";
 		// return super.toString();
 	}
-	
 }
  

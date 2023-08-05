@@ -31,7 +31,11 @@ public class Cliente implements Autenticable{
 	public String getProfesion() {
 		return profesion;
 	}	
-
+	// set Nombre
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
 	// Lo genera porqye Autenticable se volvio abstracta
 	@Override
 	public boolean iniciarSesion(String clave) {
