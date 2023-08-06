@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.lang.Comparable;
+import java.util.Collections;
 
 //import java.util.Collection;
 
@@ -66,7 +67,7 @@ public class TestOrdenarListasxTitular {
 
 		// no me funciono, aunque se adiciono en cuenta 
 		//implements Comparable<Cuenta>
-		//Collections.sort(lista, new ordenarPorNombreTitular());
+		Collections.sort(lista, new ordenarPorNombreTitular());
 		
 		System.out.println("Lista Cuentas Ordenado x Titular");
 		for (Cuenta cuenta : lista) {
