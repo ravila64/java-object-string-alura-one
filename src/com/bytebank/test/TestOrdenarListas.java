@@ -5,23 +5,36 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Comparator;
 
+import com.bytebank.modelo.Cliente;
 import com.bytebank.modelo.banco.Cuenta;
 import com.bytebank.modelo.banco.CuentaAhorros;
 import com.bytebank.modelo.banco.CuentaCorriente;
 
 public class TestOrdenarListas {
 	public static void main(String[] args) {
-		Cuenta cc1=new CuentaCorriente(22,33);
+		Cuenta cc1=new CuentaCorriente(22, 33);
+		Cliente cli1=new Cliente();
+		cli1.setNombre("Rene");
+		cc1.setTitular(cli1);
 		cc1.depositar(333.0);
 		
-		Cuenta cc2=new CuentaAhorros(22,44);
-		cc1.depositar(444.0);
+		Cuenta cc2=new CuentaAhorros(23, 44);
+		Cliente cli2=new Cliente();
+		cli2.setNombre("Camila");
+		cc2.setTitular(cli2);
+		cc2.depositar(444.0);
 		
-		Cuenta cc3=new CuentaCorriente(22,22);
-		cc1.depositar(222.0);
-			
-		Cuenta cc4=new CuentaAhorros(22,55);
-		cc1.depositar(444.0);
+		Cuenta cc3=new CuentaCorriente(24, 11);
+		Cliente cli3=new Cliente();
+		cli3.setNombre("Beatriz");
+		cc3.setTitular(cli3);
+		cc3.depositar(5000.0);
+		
+		Cuenta cc4=new CuentaAhorros(25, 55);
+		Cliente cli4=new Cliente();
+		cli4.setNombre("Ana");
+		cc4.setTitular(cli4);
+		cc4.depositar(1000.0);
 		
 		List<Cuenta> lista=new ArrayList<>();
 		lista.add(cc1);

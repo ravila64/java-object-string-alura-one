@@ -20,7 +20,7 @@ public class TestGuardaReferencias {
 		System.out.println("Cliente  "+cliente);
 		
 		int tamano = guardaRef.getCantidadDeElementos();
-		System.out.println("Tamaño  "+tamano);
+		System.out.println("TamaNo  "+tamano);
 	
 	}
 }
