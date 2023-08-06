@@ -1,7 +1,7 @@
 package com.bytebank.test;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Comparator;
 
@@ -36,16 +36,38 @@ public class TestOrdenarListas {
 		//           cualq clase hija de Cuenta/ o Cuenta
 		// comparator <? extend Cuenta> c
 		// Java new
-		Comparator<Cuenta> comparator = new ordenadoPorNumeroCuenta();
-		lista.sort(comparator);
+		//Comparator<Cuenta> comparator = new ordenadoPorNumeroCuenta();
+		//lista.sort(comparator);
+		
+		// se quito para ejecutar con new Comparator<Cuenta>()
+		// CLASES ANOMIMAS
+		lista.sort(new Comparator<Cuenta>() {
+			@Override
+			public int compare(Cuenta o1, Cuenta o2) {
+				// ejemplo ordenar x numero cuenta
+			    return Integer.compare(o1.getNumero(),o2.getNumero());
+			}
+		});
+		
 		// Java 8
 		// lista.sort(new ordenadoPorNumeroCuenta());
 		// Java 7
-		//Collections.sort(lista, new ordenadoPorNumeroCuenta());
+//		Collections.sort(lista, new ordenadoPorNumeroCuenta());
+		// EJeMPLO DE CLASE ANOMIMAS
+		Collections.sort(lista, new Comparator<Cuenta>() {
+			@Override
+			public int compare(Cuenta o1, Cuenta o2) {
+				// ORDEMNAR X NOMBRE DE TITULAR
+				return o1.getTitular().getNombre().compareTo(o2.getTitular().getNombre());
+			}
+			
+		});
 		System.out.println("Lista Cuentas en orden");
 		for (Cuenta cuenta : lista) {
 			System.out.println(cuenta);
 		}
+		// Una interfaz no se puede instanciar
+		
 	}
 }
 
